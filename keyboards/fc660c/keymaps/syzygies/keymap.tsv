@@ -1,56 +1,56 @@
 
-	0	Base
-KC_GRV	KC_1	KC_2	KC_3	KC_4	KC_5	KC_6	KC_7	KC_8	KC_9	KC_0	KC_MINS	KC_EQL	LT(2,KC_BSPC)	DF(1)
-LT(3,KC_TAB)	KC_Q	KC_W	KC_E	KC_R	KC_T	KC_Y	KC_U	KC_I	KC_O	KC_P	KC_LBRC	KC_RBRC	KC_BSLS	KC_DEL
-LT(4,KC_ESC)	SFT_T(KC_A)	LT(7,KC_S)	LT(6,KC_D)	LT(5,KC_F)	KC_G	KC_H	LT(5,KC_J)	LT(6,KC_K)	LT(7,KC_L)	SFT_T(KC_SCLN)	KC_QUOT	KC_ENT
-KC_LSFT	KC_Z	KC_X	KC_C	KC_V	KC_B	KC_N	KC_M	KC_COMM	KC_DOT	KC_SLSH	KC_RSFT	KC_UP
-KC_LCTL	KC_LALT	KC_LGUI	KC_SPC	KC_RGUI	KC_RALT	KC_RCTL	KC_LEFT	KC_DOWN	KC_RGHT
+             	0           	Base
+KC_GRV       	KC_1        	KC_2       	KC_3       	KC_4       	KC_5       	KC_6    	KC_7       	KC_8        	KC_9       	KC_0           	KC_MINS 	KC_EQL  	LT(2,KC_BSPC) 	DF(1)
+LT(3,KC_TAB) 	KC_Q        	KC_W       	KC_E       	KC_R       	KC_T       	KC_Y    	KC_U       	KC_I        	KC_O       	KC_P           	KC_LBRC 	KC_RBRC 	KC_BSLS       	KC_DEL
+LT(4,KC_ESC) 	SFT_T(KC_A) 	LT(7,KC_S) 	LT(6,KC_D) 	LT(5,KC_F) 	KC_G       	KC_H    	LT(5,KC_J) 	LT(6,KC_K)  	LT(7,KC_L) 	SFT_T(KC_SCLN) 	KC_QUOT 	KC_ENT
+KC_LSFT      	KC_Z        	KC_X       	KC_C       	KC_V       	KC_B       	KC_N    	KC_M       	KC_COMM     	KC_DOT     	KC_SLSH        	KC_RSFT 	KC_UP
+KC_LCTL      	KC_LALT     	KC_LGUI    	KC_SPC     	KC_RGUI    	KC_RALT    	KC_RCTL 	KC_LEFT    	KC_DOWN     	KC_RGHT
 
-	1	Safety
-KC_GRV	KC_1	KC_2	KC_3	KC_4	KC_5	KC_6	KC_7	KC_8	KC_9	KC_0	KC_MINS	KC_EQL	LT(2,KC_BSPC)	DF(0)
-KC_TAB	KC_Q	KC_W	KC_E	KC_R	KC_T	KC_Y	KC_U	KC_I	KC_O	KC_P	KC_LBRC	KC_RBRC	KC_BSLS	KC_DEL
-KC_ESC	KC_A	KC_S	KC_D	KC_F	KC_G	KC_H	KC_J	KC_K	KC_L	KC_SCLN	KC_QUOT	KC_ENT
-KC_LSFT	KC_Z	KC_X	KC_C	KC_V	KC_B	KC_N	KC_M	KC_COMM	KC_DOT	KC_SLSH	KC_RSFT	KC_UP
-KC_LCTL	KC_LALT	KC_LGUI	KC_SPC	KC_RGUI	KC_RALT	KC_RCTL	KC_LEFT	KC_DOWN	KC_RGHT
+             	1           	Safety
+KC_GRV       	KC_1        	KC_2       	KC_3       	KC_4       	KC_5       	KC_6    	KC_7       	KC_8        	KC_9       	KC_0           	KC_MINS 	KC_EQL  	LT(2,KC_BSPC) 	DF(0)
+KC_TAB       	KC_Q        	KC_W       	KC_E       	KC_R       	KC_T       	KC_Y    	KC_U       	KC_I        	KC_O       	KC_P           	KC_LBRC 	KC_RBRC 	KC_BSLS       	KC_DEL
+KC_ESC       	KC_A        	KC_S       	KC_D       	KC_F       	KC_G       	KC_H    	KC_J       	KC_K        	KC_L       	KC_SCLN        	KC_QUOT 	KC_ENT
+KC_LSFT      	KC_Z        	KC_X       	KC_C       	KC_V       	KC_B       	KC_N    	KC_M       	KC_COMM     	KC_DOT     	KC_SLSH        	KC_RSFT 	KC_UP
+KC_LCTL      	KC_LALT     	KC_LGUI    	KC_SPC     	KC_RGUI    	KC_RALT    	KC_RCTL 	KC_LEFT    	KC_DOWN     	KC_RGHT
 
-	2	Backspace
-x	KC_F1	KC_F2	KC_F3	KC_F4	KC_F5	KC_F6	KC_F7	KC_F8	KC_F9	KC_F10	KC_F11	KC_F12	x	RESET
-x	x	x	x	x	x	x	x	x	x	x	x	x	x	x
-x	x	x	x	x	x	x	x	x	x	x	x	x
-x	x	x	x	x	x	x	x	x	x	x	x	x
-x	x	x	x	x	x	x	x	x	x
+             	2           	Backspace
+x            	KC_F1       	KC_F2      	KC_F3      	KC_F4      	KC_F5      	KC_F6   	KC_F7      	KC_F8       	KC_F9      	KC_F10         	KC_F11  	KC_F12  	x             	RESET
+x            	x           	x          	x          	x          	x          	x       	x          	x           	x          	x              	x       	x       	x             	x
+x            	x           	x          	x          	x          	x          	x       	x          	x           	x          	x              	x       	x
+x            	x           	x          	x          	x          	x          	x       	x          	x           	x          	x              	x       	x
+x            	x           	x          	x          	x          	x          	x       	x          	x           	x
 
-	3	Tab
-x	x	x	x	x	x	x	x	x	x	x	x	x	x	x
-x	x	x	x	x	x	x	x	x	x	x	x	x	x	x
-x	x	x	x	x	x	x	x	x	x	x	x	x
-x	x	MEH(KC_X)	x	x	x	x	x	x	x	x	x	x
-x	x	x	x	x	x	x	x	x	x
+             	3           	Tab
+x            	x           	x          	x          	x          	x          	x       	x          	x           	x          	x              	x       	x       	x             	x
+x            	x           	x          	x          	x          	x          	x       	x          	x           	x          	x              	x       	x       	x             	x
+x            	x           	x          	x          	x          	x          	x       	x          	x           	x          	x              	x       	x
+x            	x           	MEH(KC_X)  	x          	x          	x          	x       	x          	x           	x          	x              	x       	x
+x            	x           	x          	x          	x          	x          	x       	x          	x           	x
 
-	4	CapsLock
-x	x	x	x	x	x	x	x	x	x	x	x	x	x	x
-x	G(KC_Q)	G(KC_W)	SCMD(KC_B)	HYPR(KC_R)	HYPR(KC_T)	KC_HOME	KC_PGDOWN	KC_PGUP	KC_END	G(KC_P)	x	x	x	x
-x	G(KC_A)	G(KC_S)	HYPR(KC_D)	HYPR(KC_F)	HYPR(KC_G)	KC_LEFT	KC_DOWN	KC_UP	KC_RGHT	S(G(KC_RBRC))	x	x
-x	G(KC_Z)	G(KC_X)	G(KC_C)	G(KC_V)	S(G(KC_G))	G(KC_G)	G(KC_F)	A(G(KC_F))	S(G(KC_F))	S(G(KC_H))	x	x
-x	x	x	x	x	x	x	x	x	x
+             	4           	CapsLock
+x            	x           	x          	x          	x          	x          	x       	x          	x           	x          	x              	x       	x       	x             	x
+x            	G(KC_Q)     	G(KC_W)    	SCMD(KC_B) 	HYPR(KC_R) 	HYPR(KC_T) 	KC_HOME 	KC_PGDOWN  	KC_PGUP     	KC_END     	G(KC_P)        	x       	x       	x             	x
+x            	G(KC_A)     	G(KC_S)    	HYPR(KC_D) 	HYPR(KC_F) 	HYPR(KC_G) 	KC_LEFT 	KC_DOWN    	KC_UP       	KC_RGHT    	S(G(KC_RBRC))  	x       	x
+x            	G(KC_Z)     	G(KC_X)    	G(KC_C)    	G(KC_V)    	S(G(KC_G)) 	G(KC_G) 	G(KC_F)    	A(G(KC_F))  	S(G(KC_F)) 	S(G(KC_H))     	x       	x
+x            	x           	x          	x          	x          	x          	x       	x          	x           	x
 
-	5	FJ Home
-x	x	x	x	x	x	x	x	x	x	x	x	x	KC_BSPC	x
-KC_TAB	KC_TILD	KC_LCBR	KC_RCBR	KC_EXLM	KC_AT	KC_HASH	KC_DLR	KC_PERC	KC_BSLS	KC_PIPE	x	x	x	KC_DEL
-x	KC_GRV	KC_LPRN	KC_RPRN	KC_UNDS	KC_CIRC	KC_AMPR	KC_MINS	KC_EQL	KC_PLUS	KC_COLN	x	KC_ENT
-x	x	KC_LBRC	KC_RBRC	KC_ASTR	x	KC_QUOT	KC_DQUO	KC_LT	KC_GT	KC_QUES	x	x
-x	x	x	KC_SPC	x	x	x	x	x	x
+             	5           	FJ Home
+x            	x           	x          	x          	x          	x          	x       	x          	x           	x          	x              	x       	x       	KC_BSPC       	x
+KC_TAB       	KC_TILD     	KC_LCBR    	KC_RCBR    	KC_EXLM    	KC_AT      	KC_HASH 	KC_DLR     	KC_PERC     	KC_BSLS    	KC_PIPE        	x       	x       	x             	KC_DEL
+x            	KC_GRV      	KC_LPRN    	KC_RPRN    	KC_UNDS    	KC_CIRC    	KC_AMPR 	KC_MINS    	KC_EQL      	KC_PLUS    	KC_COLN        	x       	KC_ENT
+x            	x           	KC_LBRC    	KC_RBRC    	KC_ASTR    	x          	KC_QUOT 	KC_DQUO    	KC_LT       	KC_GT      	KC_QUES        	x       	x
+x            	x           	x          	KC_SPC     	x          	x          	x       	x          	x           	x
 
-	6	DK Home
-x	x	x	x	x	x	x	x	x	x	x	x	x	KC_BSPC	x
-KC_TAB	KC_1	KC_2	KC_3	KC_4	KC_5	KC_HOME	KC_PGDOWN	KC_PGUP	KC_END	x	x	x	x	KC_DEL
-x	KC_6	KC_7	KC_8	KC_9	KC_0	KC_LEFT	KC_DOWN	KC_UP	KC_RGHT	x	x	KC_ENT
-x	G(KC_Z)	G(KC_X)	G(KC_C)	G(KC_V)	x	x	KC__MUTE	KC__VOLDOWN	KC__VOLUP	x	x	x
-x	x	x	KC_SPC	x	x	x	x	x	x
+             	6           	DK Home
+x            	x           	x          	x          	x          	x          	x       	x          	x           	x          	x              	x       	x       	KC_BSPC       	x
+KC_TAB       	KC_1        	KC_2       	KC_3       	KC_4       	KC_5       	KC_HOME 	KC_PGDOWN  	KC_PGUP     	KC_END     	x              	x       	x       	x             	KC_DEL
+x            	KC_6        	KC_7       	KC_8       	KC_9       	KC_0       	KC_LEFT 	KC_DOWN    	KC_UP       	KC_RGHT    	x              	x       	KC_ENT
+x            	G(KC_Z)     	G(KC_X)    	G(KC_C)    	G(KC_V)    	x          	x       	KC__MUTE   	KC__VOLDOWN 	KC__VOLUP  	x              	x       	x
+x            	x           	x          	KC_SPC     	x          	x          	x       	x          	x           	x
 
-	7	SL Home
-x	x	x	x	x	x	x	x	x	x	x	x	x	KC_BSPC	x
-KC_TAB	x	x	x	x	x	x	x	x	x	x	x	x	x	KC_DEL
-x	x	x	x	x	x	x	x	x	x	x	x	KC_ENT
-x	x	x	x	x	x	x	x	x	x	x	x	x
-x	x	x	KC_SPC	x	x	x	x	x	x
+             	7           	SL Home
+x            	x           	x          	x          	x          	x          	x       	x          	x           	x          	x              	x       	x       	KC_BSPC       	x
+KC_TAB       	x           	x          	x          	x          	x          	x       	x          	x           	x          	x              	x       	x       	x             	KC_DEL
+x            	x           	x          	x          	x          	x          	x       	x          	x           	x          	x              	x       	KC_ENT
+x            	x           	x          	x          	x          	x          	x       	x          	x           	x          	x              	x       	x
+x            	x           	x          	KC_SPC     	x          	x          	x       	x          	x           	x
