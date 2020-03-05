@@ -14,37 +14,53 @@ short = {
   'o' => '_______'
 }
 
-data = []
-index = 0
+data  = []
+label = []
+index = nil
 CSV.read(tsv, col_sep: "\t", quote_char: nil).each do |row|
-  if row[0]
-    row = row.compact.map { |x| short[x.strip] or x.strip }
-    if data[index]
-      data[index] << row
+  if row[1]
+    if index
+      row = row[1..-1].compact.map { |x| short[x.strip] or x.strip }
+      if data[index]
+        data[index] << row
+      else
+        data[index] = [row]
+      end
     else
-      data[index] = [row]
-    end      
+      index = row[1].to_i
+      label[index] = row[2]
+    end
   else
-    index += 1
+    index = nil
   end
 end
 
 widths = Array.new(15,0)
 data.each do |layer|
-  layer.each do |row|
-    widths = widths.zip(row.map { |x| x.length }).map { |x| x.compact.max }
+  if layer
+    layer.each do |row|
+      widths = widths.zip(row.map { |x| x.length }).map { |x| x.compact.max }
+    end
   end
 end
 
 data = data.map do |layer|
-  layer.map do |row|
-    row.zip(widths).map { |entry, len| entry.ljust(len+1) }.join(', ').prepend('    ')
-  end.join(",\n")
+  if layer
+    layer.map do |row|
+      row.zip(widths).map { |entry, len| entry.ljust(len+1) }.join(', ').prepend('    ')
+    end.join(",\n")
+  else
+    nil
+  end
 end
 
 layout = data.each_with_index.map do |layer, index|
-  "  [#{index}] = LAYOUT(\n#{layer}\n  )"
-end.join(",\n")
+  if layer
+    "  // #{label[index]}\n  [#{index}] = LAYOUT(\n#{layer}\n  )"
+  else
+    nil
+  end
+end.compact.join(",\n")
 
 src = <<-EOS
 // Copyright 2020 Dave Bayer The MIT License (MIT)
