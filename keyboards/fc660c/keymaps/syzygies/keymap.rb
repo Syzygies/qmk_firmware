@@ -10,23 +10,36 @@ tsv = "#{path}/keymap.tsv"
 map = "#{path}/keymap.c"
 
 short = {
-  'o' => 'KC_NO',
-  'v' => 'KC_TRNS'
+  'x' => 'XXXXXXX',
+  'o' => '_______'
 }
 
 data = []
 index = 0
 CSV.read(tsv, col_sep: "\t", quote_char: nil).each do |row|
   if row[0]
-    row = row.compact.map { |x| short[x.strip] or x }.join(', ').prepend('    ')
+    row = row.compact.map { |x| short[x.strip] or x.strip }
     if data[index]
-      data[index] << ",\n" << row
+      data[index] << row
     else
-      data[index] = row
+      data[index] = [row]
     end      
   else
     index += 1
   end
+end
+
+widths = Array.new(15,0)
+data.each do |layer|
+  layer.each do |row|
+    widths = widths.zip(row.map { |x| x.length }).map { |x| x.compact.max }
+  end
+end
+
+data = data.map do |layer|
+  layer.map do |row|
+    row.zip(widths).map { |entry, len| entry.ljust(len+1) }.join(', ').prepend('    ')
+  end.join(",\n")
 end
 
 layout = data.each_with_index.map do |layer, index|
