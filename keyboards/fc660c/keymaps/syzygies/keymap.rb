@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # Copyright 2020 Dave Bayer The MIT License (MIT)
 
-# generate keymap.c from keymap.csv
+# generate keymap.c from keymap.tsv
 
 require 'csv'
 
