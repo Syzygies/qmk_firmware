@@ -6,31 +6,26 @@
 require 'csv'
 
 path = File.dirname(__FILE__)
-csv = "#{path}/keymap.csv"
+tsv = "#{path}/keymap.tsv"
 map = "#{path}/keymap.c"
 
 short = {
   'o' => 'KC_NO',
-  'v' => 'KC_TRANSPARENT'
+  'v' => 'KC_TRNS'
 }
 
 data = []
-index = nil
-CSV.read(csv).each do |row|
+index = 0
+CSV.read(tsv, col_sep: "\t", quote_char: nil).each do |row|
   if row[0]
-    if index
-      row = row[1..-1].compact.map { |x| short[x] or x }.join(', ').prepend('    ')
-      if data[index]
-        data[index] << ",\n" << row
-      else
-        data[index] = row
-      end
-      index += 1
+    row = row.compact.map { |x| short[x.strip] or x }.join(', ').prepend('    ')
+    if data[index]
+      data[index] << ",\n" << row
     else
-      index = 0
-    end
+      data[index] = row
+    end      
   else
-    index = nil
+    index += 1
   end
 end
 
