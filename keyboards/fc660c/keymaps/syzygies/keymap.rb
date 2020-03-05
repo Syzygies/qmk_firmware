@@ -20,7 +20,7 @@ index = nil
 CSV.read(tsv, col_sep: "\t", quote_char: nil).each do |row|
   if row[1]
     if index
-      row = row[1..-1].compact.map { |x| short[x.strip] or x.strip }
+      row = row.compact.map { |x| short[x.strip] or x.strip }
       if data[index]
         data[index] << row
       else
