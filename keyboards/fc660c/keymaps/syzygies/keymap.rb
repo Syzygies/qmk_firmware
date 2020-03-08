@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# Copyright 2020 Dave Bayer The MIT License (MIT)
+# Copyright 2020 Dave Bayer davebayer@mac.com @Syzygies <http://www.wtfpl.net/>
 
 # generate keymap.c from keymap.tsv
 
@@ -63,7 +63,7 @@ layout = data.each_with_index.map do |layer, index|
 end.compact.join(",\n")
 
 src = <<-EOS
-// Copyright 2020 Dave Bayer The MIT License (MIT)
+// Copyright 2020 Dave Bayer davebayer@mac.com @Syzygies <http://www.wtfpl.net/>
 
 #include QMK_KEYBOARD_H
 
