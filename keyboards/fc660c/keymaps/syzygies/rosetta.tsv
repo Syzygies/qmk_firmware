@@ -1,0 +1,152 @@
+A(G(KC_F))      	w     	agF
+DF(0)           	w     	to0
+DF(1)           	w     	to1
+G(KC_A)         	w     	gA
+G(KC_C)         	w     	gC
+G(KC_F)         	w     	gF
+G(KC_G)         	w     	gG
+G(KC_P)         	w     	gP
+G(KC_Q)         	w     	gQ
+G(KC_S)         	w     	gS
+G(KC_V)         	w     	gV
+G(KC_W)         	w     	gW
+G(KC_X)         	w     	gX
+G(KC_Z)         	w     	gZ
+HYPR(KC_D)      	w     	hypD
+HYPR(KC_F)      	w     	hypF
+HYPR(KC_G)      	w     	hypG
+HYPR(KC_R)      	w     	hypR
+HYPR(KC_T)      	w     	hypT
+KC__MUTE        	w     	Mute
+KC__VOLDOWN     	w     	Vol-
+KC__VOLUP       	w     	Vol+
+KC_0            	w     	0
+KC_1            	w     	1
+KC_2            	w     	2
+KC_3            	w     	3
+KC_4            	w   4
+KC_5            	w     	5
+KC_6            	w     	6
+KC_7            	w     	7
+KC_8            	w     	8
+KC_9            	w     	9
+KC_A            	w     	A
+KC_AMPR         	w     	&
+KC_ASTR         	w     	*
+KC_AT           	w     	@
+KC_B            	w     	B
+KC_BSLS         	w     	\
+KC_BSPC         	w     	Back
+KC_C            	w     	C
+KC_CIRC         	w     	^
+KC_COLN         	w     	:
+KC_COMM         	w     	,
+KC_D            	w     	D
+KC_DEL          	w     	Del
+KC_DLR          	w     	$
+KC_DOT          	w     	.
+KC_DOWN         	w     	Down
+KC_DQUO         	w     	"
+KC_E            	w     	E
+KC_END          	w     	End
+KC_ENT          	w     	Enter
+KC_EQL          	w     	=
+KC_ESC          	w     	Esc
+KC_EXLM         	w     	!
+KC_F            	w     	F
+KC_F1           	w     	F1
+KC_F2           	w     	F2
+KC_F3           	w     	F3
+KC_F4           	w     	F4
+KC_F5           	w     	F5
+KC_F6           	w     	F6
+KC_F7           	w     	F7
+KC_F8           	w     	F8
+KC_F9           	w     	F9
+KC_G            	w   G
+KC_GRV          	w     	`
+KC_GT           	w     	>
+KC_H            	w     	H
+KC_HASH         	w     	#
+KC_HOME         	w     	Home
+KC_I            	w     	I
+KC_J            	w     	J
+KC_K            	w     	K
+KC_L            	w     	L
+KC_LALT         	w     	Alt
+KC_LBRC         	w     	[
+KC_LCBR         	w     	{
+KC_LCTL         	w     	Ctrl
+KC_LEFT         	w     	Left
+KC_LGUI         	w     	Gui
+KC_LPRN         	w     	(
+KC_LSFT         	w     	Shift
+KC_LT           	w     	<
+KC_M            	w     	M
+KC_MINS         	w     	-
+KC_N            	w     	N
+KC_O            	w     	O
+KC_P            	w     	P
+KC_PERC         	w     	%
+KC_PGDOWN       	w     	PgDn
+KC_PGUP         	w     	PgUp
+KC_PIPE         	w     	|
+KC_PLUS         	w     	+
+KC_Q            	w     	Q
+KC_QUES         	w     	?
+KC_QUOT         	w     	'
+KC_R            	w     	R
+KC_RALT         	w     	Alt
+KC_RBRC         	w     	]
+KC_RCBR         	w     	}
+KC_RCTL         	w     	Ctrl
+KC_RGHT         	w     	Right
+KC_RGUI         	w     	Gui
+KC_RPRN         	w     	)
+KC_RSFT         	w     	Shift
+KC_S            	w     	S
+KC_SCLN         	w     	;
+KC_SLSH         	w     	/
+KC_SPC          	w     	Space
+KC_T            	w     	T
+KC_TAB          	w     	Tab
+KC_TILD         	w     	~
+KC_U            	w     	U
+KC_UNDS         	w     	_
+KC_UP           	w     	Up
+KC_V            	w     	V
+KC_W            	w     	W
+KC_X            	w     	X
+KC_Y            	w     	Y
+KC_Z            	w     	Z
+LALT_T(KC_C)    	w     	Alt C
+LCTL_T(KC_X)    	w     	Ctrl X
+LGUI_T(KC_V)    	w     	Gui V
+LSFT_T(KC_A)    	w     	Shift A
+LT(2,KC_BSPC)   	w     	to2 Back
+LT(3,KC_TAB)    	w     	to3 Tab
+LT(4,KC_ESC)    	w     	to4 Esc
+LT(5,KC_F)      	w     	to5 F
+LT(5,KC_J)      	w     	to5 J
+LT(6,KC_D)      	w     	to6 D
+LT(6,KC_K)      	w     	to6 K
+LT(7,KC_L)      	w     	to7 L
+LT(7,KC_S)      	w     	to7 S
+MEH(KC_E)       	w     	mehE
+MEH(KC_Q)       	w     	mehQ
+MEH(KC_R)       	w     	mehR
+MEH(KC_T)       	w     	mehT
+MEH(KC_W)       	w     	mehW
+MEH(KC_X)       	w     	mehX
+MEH(KC_Y)       	w     	mehY
+RALT_T(KC_COMM) 	w     	Alt ,
+RCTL_T(KC_DOT)  	w     	Ctrl .
+RESET           	w     	Reset
+RGUI_T(KC_M)    	w     	Gui M
+RSFT_T(KC_SCLN) 	w     	Shift ;
+S(G(KC_F))      	w     	sgF
+S(G(KC_G))      	w     	sgG
+S(G(KC_H))      	w     	sgH
+S(G(KC_RBRC))   	w     	sg]
+SCMD(KC_B)      	w     	sgB
+x               	-
