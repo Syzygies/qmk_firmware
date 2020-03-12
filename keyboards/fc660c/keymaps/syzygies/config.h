@@ -1,4 +1,4 @@
-// Copyright 2020 Dave Bayer davebayer@mac.com @Syzygies <http://www.wtfpl.net/>
+// Copyright 2020 Dave Bayer davebayer@mac.com @Syzygies <https://unlicense.org>
 
 #pragma once
 
@@ -6,6 +6,3 @@
 #define TAPPING_TERM 300
 #define RETRO_TAPPING
 #define IGNORE_MOD_TAP_INTERRUPT
-
-// #define IGNORE_MOD_TAP_INTERRUPT
-// #define TAPPING_FORCE_HOLD
