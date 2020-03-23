@@ -4,7 +4,7 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Safety
-  [0] = LAYOUT(
+  [0] = LAYOUT_60_ansi(
     KC_GRV  , KC_1       , KC_2         , KC_3         , KC_4         , KC_5        , KC_6    , KC_7          , KC_8            , KC_9           , KC_0       , KC_MINS , KC_EQL  , KC_BSPC ,
     KC_TAB  , KC_Q       , KC_W         , KC_E         , KC_R         , KC_T        , KC_Y    , KC_U          , KC_I            , KC_O           , KC_P       , KC_LBRC , KC_RBRC , KC_BSLS ,
     KC_ESC  , KC_A       , KC_S         , KC_D         , KC_F         , KC_G        , KC_H    , KC_J          , KC_K            , KC_L           , KC_SCLN    , KC_QUOT , KC_ENT  ,
@@ -12,7 +12,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LCTL , KC_LALT    , KC_LGUI      , KC_SPC       , KC_RGUI      , KC_RALT     , KC_RCTL , DF(1)         
   ),
   // Base
-  [1] = LAYOUT(
+  [1] = LAYOUT_60_ansi(
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX     , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX , XXXXXXX , KC_BSPC ,
     KC_TAB  , KC_Q       , LT(4,KC_W)   , LT(3,KC_E)   , LT(2,KC_R)   , KC_T        , KC_Y    , LT(2,KC_U)    , LT(3,KC_I)      , LT(4,KC_O)     , KC_P       , XXXXXXX , XXXXXXX , XXXXXXX ,
     KC_ESC  , KC_A       , LSFT_T(KC_S) , LT(6,KC_D)   , LT(5,KC_F)   , KC_G        , KC_H    , LT(5,KC_J)    , LT(6,KC_K)      , RSFT_T(KC_L)   , KC_SCLN    , XXXXXXX , KC_ENT  ,
@@ -20,7 +20,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LCTL , KC_LALT    , KC_LGUI      , KC_SPC       , KC_RGUI      , KC_RALT     , KC_RCTL , DF(0)         
   ),
   // RU
-  [2] = LAYOUT(
+  [2] = LAYOUT_60_ansi(
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX     , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX , XXXXXXX , XXXXXXX ,
     XXXXXXX , MEH(KC_Q)  , MEH(KC_W)    , MEH(KC_E)    , MEH(KC_R)    , XXXXXXX     , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX , XXXXXXX , XXXXXXX ,
     XXXXXXX , MEH(KC_A)  , MEH(KC_S)    , MEH(KC_D)    , MEH(KC_F)    , XXXXXXX     , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX , XXXXXXX ,
@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX     , XXXXXXX , XXXXXXX       
   ),
   // EI
-  [3] = LAYOUT(
+  [3] = LAYOUT_60_ansi(
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX     , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX , XXXXXXX , XXXXXXX ,
     XXXXXXX , HYPR(KC_Q) , HYPR(KC_W)   , HYPR(KC_E)   , HYPR(KC_R)   , XXXXXXX     , XXXXXXX , S(G(KC_RBRC)) , S(G(KC_LBRC))   , XXXXXXX        , XXXXXXX    , XXXXXXX , XXXXXXX , XXXXXXX ,
     XXXXXXX , HYPR(KC_A) , HYPR(KC_S)   , HYPR(KC_D)   , HYPR(KC_F)   , XXXXXXX     , XXXXXXX , SCMD(KC_B)    , G(KC_P)         , G(KC_F)        , A(G(KC_F)) , XXXXXXX , XXXXXXX ,
@@ -36,15 +36,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX     , XXXXXXX , XXXXXXX       
   ),
   // WO
-  [4] = LAYOUT(
+  [4] = LAYOUT_60_ansi(
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX     , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX , XXXXXXX , XXXXXXX ,
-    XXXXXXX , XXXXXXX    , KC_F1        , KC_F2        , KC_F3        , KC__VOLUP   , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX , XXXXXXX , XXXXXXX ,
-    XXXXXXX , KC_F4      , KC_F5        , KC_F6        , KC_F7        , KC__MUTE    , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX , XXXXXXX ,
-    XXXXXXX , XXXXXXX    , KC_F8        , KC_F9        , KC_F10       , KC__VOLDOWN , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX ,
+    XXXXXXX , XXXXXXX    , KC_F1        , KC_F2        , KC_F3        , KC__VOLUP   , BL_INC  , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX , XXXXXXX , XXXXXXX ,
+    XXXXXXX , KC_F4      , KC_F5        , KC_F6        , KC_F7        , KC__MUTE    , BL_TOGG , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX , XXXXXXX ,
+    XXXXXXX , XXXXXXX    , KC_F8        , KC_F9        , KC_F10       , KC__VOLDOWN , BL_DEC  , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX ,
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX     , XXXXXXX , RESET         
   ),
   // FJ
-  [5] = LAYOUT(
+  [5] = LAYOUT_60_ansi(
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX     , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX , XXXXXXX , KC_BSPC ,
     KC_TAB  , KC_TILD    , KC_LCBR      , KC_RCBR      , KC_EXLM      , KC_AT       , KC_HASH , KC_DLR        , KC_PERC         , KC_BSLS        , KC_PIPE    , XXXXXXX , XXXXXXX , XXXXXXX ,
     XXXXXXX , KC_GRV     , KC_LPRN      , KC_RPRN      , KC_UNDS      , KC_CIRC     , KC_AMPR , KC_MINS       , KC_EQL          , KC_PLUS        , KC_COLN    , XXXXXXX , XXXXXXX ,
@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX     , XXXXXXX , XXXXXXX       
   ),
   // DK
-  [6] = LAYOUT(
+  [6] = LAYOUT_60_ansi(
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX     , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX , XXXXXXX , KC_BSPC ,
     KC_TAB  , XXXXXXX    , KC_1         , KC_2         , KC_3         , KC_SLSH     , KC_HOME , KC_PGDOWN     , KC_PGUP         , KC_END         , XXXXXXX    , XXXXXXX , XXXXXXX , XXXXXXX ,
     XXXXXXX , KC_4       , KC_5         , KC_6         , KC_7         , KC_MINS     , KC_LEFT , KC_DOWN       , KC_UP           , KC_RGHT        , XXXXXXX    , XXXXXXX , XXXXXXX ,
