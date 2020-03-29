@@ -45,7 +45,7 @@ bool waitForUsb(void) {
 }
 
 
-bool is_keyboard_left(void) {
+__attribute__((weak)) bool is_keyboard_left(void) {
 #if defined(SPLIT_HAND_PIN)
     // Test pin SPLIT_HAND_PIN for High/Low, if low it's right hand
     setPinInput(SPLIT_HAND_PIN);
@@ -53,13 +53,13 @@ bool is_keyboard_left(void) {
 #elif defined(EE_HANDS)
     return eeconfig_read_handedness();
 #elif defined(MASTER_RIGHT)
-    return !is_helix_master();
+    return !has_usb();
 #endif
 
-    return is_helix_master();
+    return has_usb();
 }
 
-bool is_helix_master(void) {
+__attribute__((weak)) bool has_usb(void) {
     static enum { UNKNOWN, MASTER, SLAVE } usbstate = UNKNOWN;
 
     // only check once, as this is called often
@@ -100,10 +100,11 @@ static void keyboard_slave_setup(void) {
 void split_keyboard_setup(void) {
    isLeftHand = is_keyboard_left();
 
-   if (is_helix_master()) {
+   if (has_usb()) {
       keyboard_master_setup();
    } else {
       keyboard_slave_setup();
    }
    sei();
 }
+

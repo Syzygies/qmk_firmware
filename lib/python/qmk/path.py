@@ -65,7 +65,7 @@ def normpath(path):
     path = Path(path)
 
     if path.is_absolute():
-        return path
+        return Path(path)
 
     return Path(os.environ['ORIG_CWD']) / path
 

@@ -1,14 +1,15 @@
-#pragma once
+#ifndef CONFIG_H
+#define CONFIG_H
 
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0x5436 // "T6"
-#define PRODUCT_ID      0x6060 // Tokyo60
+#define VENDOR_ID       0xFEED
+#define PRODUCT_ID      0x6060
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    Tokyo Keyboard
-#define PRODUCT         Tokyo60
-#define DESCRIPTION     q.m.k. keyboard firmware for Tokyo60
+#define PRODUCT         tokyo60
+#define DESCRIPTION     q.m.k. keyboard firmware for tokyo60
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -53,3 +54,5 @@
 /* For Production */
 #define QMK_ESC_OUTPUT F0 // usually COL
 #define QMK_ESC_INPUT D0 // usually ROW
+
+#endif

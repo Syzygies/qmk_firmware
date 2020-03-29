@@ -30,7 +30,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "util.h"
 #include "matrix.h"
 #include "split_util.h"
-#include "quantum.h"
+#include "pro_micro.h"
 
 #ifdef USE_MATRIX_I2C
 #  include "i2c.h"
@@ -96,38 +96,37 @@ uint8_t matrix_cols(void)
 void tx_rx_leds_init(void)
 {
 #ifndef NO_DEBUG_LEDS
-    setPinOutput(B0);
-    setPinOutput(D5);
-    writePinHigh(B0);
-    writePinHigh(D5);
+    TX_RX_LED_INIT;
+    TXLED0;
+    RXLED0;
 #endif
 }
 
 void tx_led_on(void)
 {
 #ifndef NO_DEBUG_LEDS
-    writePinLow(D5);
+    TXLED1;
 #endif
 }
 
 void tx_led_off(void)
 {
 #ifndef NO_DEBUG_LEDS
-    writePinHigh(D5);
+    TXLED0;
 #endif
 }
 
 void rx_led_on(void)
 {
 #ifndef NO_DEBUG_LEDS
-    writePinLow(B0);
+    RXLED1;
 #endif
 }
 
 void rx_led_off(void)
 {
 #ifndef NO_DEBUG_LEDS
-    writePinHigh(B0);
+    RXLED0;
 #endif
 }
 

@@ -92,6 +92,9 @@ uint8_t matrix_cols(void) {
 }
 
 void matrix_init(void) {
+    DDRF |= (1<<6);
+    DDRF |= (1<<5);
+    DDRD |= (1<<1);
     matrix_init_quantum();
 }
 

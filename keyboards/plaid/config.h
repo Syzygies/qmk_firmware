@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT_ID 0x27db
 #define DEVICE_VER 0x0002
 #define MANUFACTURER dm9records
-#define PRODUCT Plaid
+#define PRODUCT plaid
 #define DESCRIPTION 12x4 ortholinear keyboard with through hole components
 
 /* key matrix size */
@@ -49,6 +49,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
 
+#define NO_UART 1
 #define USB_MAX_POWER_CONSUMPTION 100
 
 /*

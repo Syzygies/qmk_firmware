@@ -29,9 +29,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "util.h"
 #include "matrix.h"
 #include "split_util.h"
-#include "quantum.h"
 
 #include "serial.h"
+
+// from pro_micro.h
+#define TX_RX_LED_INIT  DDRD |= (1<<5), DDRB |= (1<<0)
+
+#ifndef DISABLE_PROMICRO_LEDs
+  #define TXLED0          PORTD |= (1<<5)
+  #define TXLED1          PORTD &= ~(1<<5)
+  #define RXLED0          PORTB |= (1<<0)
+  #define RXLED1          PORTB &= ~(1<<0)
+#else
+  #define TXLED0
+  #define TXLED1
+  #define RXLED0
+  #define RXLED1
+#endif
 
 #ifndef DEBOUNCE
 #  define DEBOUNCE	5
@@ -94,12 +108,11 @@ void matrix_init(void) {
   unselect_rows();
   init_cols();
 
-  setPinOutput(B0);
-  setPinOutput(D5);
+  TX_RX_LED_INIT;
 
   #ifdef DISABLE_PROMICRO_LEDs
-    writePinHigh(B0);
-    writePinHigh(D5);
+    PORTD |= (1<<5);
+    PORTB |= (1<<0);
   #endif
 
   // initialize matrix state: all keys off
@@ -145,14 +158,10 @@ int serial_transaction(void) {
   int slaveOffset = (isLeftHand) ? (ROWS_PER_HAND) : 0;
   int ret=serial_update_buffers();
   if (ret ) {
-#ifndef DISABLE_PROMICRO_LEDs
-      if(ret==2) writePinLow(B0);
-#endif
+      if(ret==2)RXLED1;
       return 1;
   }
-#ifndef DISABLE_PROMICRO_LEDs
-  writePinHigh(B0);
-#endif
+RXLED0;
   for (int i = 0; i < ROWS_PER_HAND; ++i) {
       matrix[slaveOffset+i] = serial_slave_buffer[i];
   }
@@ -188,10 +197,8 @@ uint8_t matrix_master_scan(void) {
   }
 
   if( serial_transaction() ) {
-#ifndef DISABLE_PROMICRO_LEDs
     // turn on the indicator led when halves are disconnected
-    writePinLow(D5);
-#endif
+    TXLED1;
 
     error_count++;
 
@@ -203,10 +210,8 @@ uint8_t matrix_master_scan(void) {
       }
     }
   } else {
-#ifndef DISABLE_PROMICRO_LEDs
     // turn off the indicator led on no error
-    writePinHigh(D5);
-#endif
+    TXLED0;
     error_count = 0;
   }
   matrix_scan_quantum();

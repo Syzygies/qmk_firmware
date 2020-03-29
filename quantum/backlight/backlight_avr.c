@@ -1,7 +1,10 @@
 #include "quantum.h"
 #include "backlight.h"
-#include "backlight_driver_common.h"
 #include "debug.h"
+
+#if !defined(BACKLIGHT_PIN) && !defined(BACKLIGHT_PINS)
+#    error "Backlight pin/pins not defined. Please configure."
+#endif
 
 // This logic is a bit complex, we support 3 setups:
 //
@@ -161,7 +164,49 @@ error("Please set 'BACKLIGHT_DRIVER = custom' within rules.mk")
 error("Please set 'BACKLIGHT_DRIVER = software' within rules.mk")
 #endif
 
-#ifndef BACKLIGHT_PWM_TIMER  // pwm through software
+#ifndef BACKLIGHT_ON_STATE
+#    define BACKLIGHT_ON_STATE 1
+#endif
+
+void backlight_on(pin_t backlight_pin) {
+#if BACKLIGHT_ON_STATE == 1
+    writePinHigh(backlight_pin);
+#else
+    writePinLow(backlight_pin);
+#endif
+}
+
+void backlight_off(pin_t backlight_pin) {
+#if BACKLIGHT_ON_STATE == 1
+    writePinLow(backlight_pin);
+#else
+    writePinHigh(backlight_pin);
+#endif
+}
+
+#ifdef BACKLIGHT_PWM_TIMER  // pwm through software
+
+// we support multiple backlight pins
+#    ifndef BACKLIGHT_LED_COUNT
+#        define BACKLIGHT_LED_COUNT 1
+#    endif
+
+#    if BACKLIGHT_LED_COUNT == 1
+#        define BACKLIGHT_PIN_INIT \
+            { BACKLIGHT_PIN }
+#    else
+#        define BACKLIGHT_PIN_INIT BACKLIGHT_PINS
+#    endif
+
+#    define FOR_EACH_LED(x)                                 \
+        for (uint8_t i = 0; i < BACKLIGHT_LED_COUNT; i++) { \
+            pin_t backlight_pin = backlight_pins[i];        \
+            { x }                                           \
+        }
+
+static const pin_t backlight_pins[BACKLIGHT_LED_COUNT] = BACKLIGHT_PIN_INIT;
+
+#else  // full hardware PWM
 
 static inline void enable_pwm(void) {
 #    if BACKLIGHT_ON_STATE == 1
@@ -178,6 +223,10 @@ static inline void disable_pwm(void) {
     TCCRxA &= ~(_BV(COMxx1) | _BV(COMxx0));
 #    endif
 }
+
+// we support only one backlight pin
+static const pin_t backlight_pin = BACKLIGHT_PIN;
+#    define FOR_EACH_LED(x) x
 
 #endif
 
@@ -197,7 +246,7 @@ static inline void disable_pwm(void) {
 // The LED will then be on for OCRxx/0xFFFF time, adjusted every 244Hz.
 
 // Triggered when the counter reaches the OCRx value
-ISR(TIMERx_COMPA_vect) { backlight_pins_off(); }
+ISR(TIMERx_COMPA_vect) { FOR_EACH_LED(backlight_off(backlight_pin);) }
 
 // Triggered when the counter reaches the TOP value
 // this one triggers at F_CPU/65536 =~ 244 Hz
@@ -216,7 +265,7 @@ ISR(TIMERx_OVF_vect) {
     // takes many computation cycles).
     // so better not turn them on while the counter TOP is very low.
     if (OCRxx > 256) {
-        backlight_pins_on();
+        FOR_EACH_LED(backlight_on(backlight_pin);)
     }
 }
 
@@ -256,7 +305,7 @@ void backlight_set(uint8_t level) {
         // Turn off PWM control on backlight pin
         disable_pwm();
 #endif
-        backlight_pins_off();
+        FOR_EACH_LED(backlight_off(backlight_pin);)
     } else {
 #ifdef BACKLIGHT_PWM_TIMER
         if (!OCRxx) {
@@ -348,6 +397,13 @@ void breathing_self_disable(void) {
         breathing_halt = BREATHING_HALT_ON;
 }
 
+void breathing_toggle(void) {
+    if (is_breathing())
+        breathing_disable();
+    else
+        breathing_enable();
+}
+
 /* To generate breathing curve in python:
  * from math import sin, pi; [int(sin(x/128.0*pi)**4*255) for x in range(128)]
  */
@@ -382,7 +438,7 @@ ISR(TIMERx_OVF_vect)
 
 void backlight_init_ports(void) {
     // Setup backlight pin as output and output to on state.
-    backlight_pins_init();
+    FOR_EACH_LED(setPinOutput(backlight_pin); backlight_on(backlight_pin);)
 
     // I could write a wall of text here to explain... but TL;DW
     // Go read the ATmega32u4 datasheet.

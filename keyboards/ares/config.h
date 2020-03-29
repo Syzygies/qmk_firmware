@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT_ID      0x422D
 #define DEVICE_VER      0x0200
 #define MANUFACTURER    LSJ
-#define PRODUCT         Ares
+#define PRODUCT         QMK Firmware for Ares
 
 #define RGBLED_NUM 16
 
@@ -41,6 +41,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BACKLIGHT_LEVELS 3
 
 #define RGBLIGHT_ANIMATIONS
+
+#define NO_UART 1
 
 /* key combination for magic key command */
 /* defined by default; to change, uncomment and set to the combination you want */

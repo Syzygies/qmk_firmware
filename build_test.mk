@@ -41,7 +41,6 @@ all: elf
 
 VPATH += $(COMMON_VPATH)
 PLATFORM:=TEST
-PLATFORM_KEY:=test
 
 ifneq ($(filter $(FULL_TESTS),$(TEST)),)
 include tests/$(TEST)/rules.mk

@@ -1,7 +1,10 @@
 {
-    "keyboard_name": "GH60 Rev C",
-    "url": "",
+    "keyboard_name": "GH60",
+    "url": "http://qmk.fm/keyboards/gh60",
     "maintainer": "qmk",
+    "keyboard_folder": "gh60",
+    "processor": "atmega32u4",
+    "manufacturer": "geekhack",
     "width": 15,
     "height": 5,
     "layouts": {

@@ -54,6 +54,7 @@
 #include "quantum.h"
 #include <util/atomic.h>
 #include "outputselect.h"
+#include "rgblight_reconfig.h"
 
 #ifdef NKRO_ENABLE
 #    include "keycode_config.h"
@@ -75,6 +76,10 @@ extern keymap_config_t keymap_config;
 
 #ifdef VIRTSER_ENABLE
 #    include "virtser.h"
+#endif
+
+#if (defined(RGB_MIDI) || defined(RGBLIGHT_ANIMATIONS)) && defined(RGBLIGHT_ENABLE)
+#    include "rgblight.h"
 #endif
 
 #ifdef MIDI_ENABLE
