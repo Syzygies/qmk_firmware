@@ -1,3 +1,3 @@
 # Dave Bayer's keymap for the planck
 
-![layout](keymap.png)
+![layout](https://raw.githubusercontent.com/Syzygies/log_folders/master/keyboards/planck/keymap.png)
