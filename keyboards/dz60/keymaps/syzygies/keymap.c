@@ -18,10 +18,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______ , _______    , _______      , _______      , _______      , _______ , _______ , _______       
   ),
   [2] = LAYOUT_60_ansi(
-    XXXXXXX , KC_F1      , KC_F2        , KC_F3        , KC_F4        , KC_F5   , KC_F6   , KC_F7         , KC_F8           , KC_F9          , KC__MUTE   , KC__VOLDOWN , KC__VOLUP , _______ ,
-    XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , BL_TOGG    , BL_DEC      , BL_INC    , XXXXXXX ,
-    TG(1)   , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX     , XXXXXXX   ,
-    XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX     ,
+    XXXXXXX , KC_F1      , KC_F2        , KC_F3        , KC_F4        , KC_F5   , KC_F6   , KC_F7         , KC_F8           , KC_F9          , KC__MUTE   , KC__VOLDOWN , KC__VOLUP , XXXXXXX ,
+    XXXXXXX , XXXXXXX    , RGB_M_P      , RGB_HUD      , RGB_HUI      , BL_INC  , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX     , XXXXXXX   , XXXXXXX ,
+    TG(1)   , XXXXXXX    , RGB_TOG      , RGB_SAD      , RGB_SAI      , BL_TOGG , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX     , XXXXXXX   ,
+    XXXXXXX , XXXXXXX    , RGB_MOD      , RGB_VAD      , RGB_VAI      , BL_DEC  , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX     ,
     RESET   , XXXXXXX    , XXXXXXX      , MEH(KC_SPC)  , XXXXXXX      , XXXXXXX , XXXXXXX , _______       
   ),
   [3] = LAYOUT_60_ansi(
