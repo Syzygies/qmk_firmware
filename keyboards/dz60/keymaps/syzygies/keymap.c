@@ -34,8 +34,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [4] = LAYOUT_60_ansi(
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX     , XXXXXXX   , _______       ,
     _______ , KC_1       , KC_2         , KC_3         , KC_4         , KC_5    , KC_HOME , KC_PGDOWN     , KC_PGUP         , KC_END         , XXXXXXX    , XXXXXXX     , XXXXXXX   , XXXXXXX       ,
-    TG(4)   , KC_6       , KC_7         , KC_8         , KC_9         , KC_0    , KC_LEFT , KC_DOWN       , KC_UP           , KC_RGHT        , XXXXXXX    , XXXXXXX     , _______   ,
-    _______ , KC_SLSH    , KC_DOT       , KC_COMM      , KC_MINS      , KC_BSPC , KC_DEL  , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , _______     ,
+    TG(4)   , KC_6       , KC_7         , KC_8         , KC_9         , KC_0    , KC_LEFT , KC_DOWN       , KC_UP           , KC_RGHT        , KC_EQL     , XXXXXXX     , _______   ,
+    _______ , XXXXXXX    , KC_COLN      , KC_COMM      , KC_DOT       , KC_BSPC , KC_DEL  , KC_PLUS       , KC_MINS         , KC_ASTR        , KC_SLSH    , _______     ,
     _______ , _______    , _______      , _______      , _______      , _______ , _______ , _______       
   ),
   [5] = LAYOUT_60_ansi(
@@ -83,8 +83,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [11] = LAYOUT_60_ansi(
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX     , XXXXXXX   , _______       ,
     _______ , KC_1       , KC_2         , KC_3         , KC_4         , KC_5    , KC_HOME , KC_PGDOWN     , KC_PGUP         , KC_END         , XXXXXXX    , XXXXXXX     , XXXXXXX   , XXXXXXX       ,
-    TG(4)   , KC_6       , KC_7         , _______      , KC_9         , KC_0    , KC_LEFT , KC_DOWN       , KC_UP           , KC_RGHT        , XXXXXXX    , XXXXXXX     , _______   ,
-    _______ , KC_SLSH    , KC_DOT       , KC_COMM      , KC_MINS      , KC_BSPC , KC_DEL  , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , _______     ,
+    TG(4)   , KC_6       , KC_7         , _______      , KC_9         , KC_0    , KC_LEFT , KC_DOWN       , KC_UP           , KC_RGHT        , KC_EQL     , XXXXXXX     , _______   ,
+    _______ , XXXXXXX    , KC_COLN      , KC_COMM      , KC_DOT       , KC_BSPC , KC_DEL  , KC_PLUS       , KC_MINS         , KC_ASTR        , KC_SLSH    , _______     ,
     _______ , _______    , _______      , _______      , _______      , _______ , _______ , _______       
   ),
   [12] = LAYOUT_60_ansi(
@@ -104,8 +104,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [14] = LAYOUT_60_ansi(
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX , XXXXXXX , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX     , XXXXXXX   , _______       ,
     _______ , KC_1       , KC_2         , KC_3         , KC_4         , KC_5    , KC_HOME , KC_PGDOWN     , KC_PGUP         , KC_END         , XXXXXXX    , XXXXXXX     , XXXXXXX   , XXXXXXX       ,
-    TG(4)   , KC_6       , KC_7         , KC_8         , KC_9         , KC_0    , KC_LEFT , KC_DOWN       , _______         , KC_RGHT        , XXXXXXX    , XXXXXXX     , _______   ,
-    _______ , KC_SLSH    , KC_DOT       , KC_COMM      , KC_MINS      , KC_BSPC , KC_DEL  , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , _______     ,
+    TG(4)   , KC_6       , KC_7         , KC_8         , KC_9         , KC_0    , KC_LEFT , KC_DOWN       , _______         , KC_RGHT        , KC_EQL     , XXXXXXX     , _______   ,
+    _______ , XXXXXXX    , KC_COLN      , KC_COMM      , KC_DOT       , KC_BSPC , KC_DEL  , KC_PLUS       , KC_MINS         , KC_ASTR        , KC_SLSH    , _______     ,
     _______ , _______    , _______      , _______      , _______      , _______ , _______ , _______       
   )
 };
