@@ -20,7 +20,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [2] = LAYOUT(
     XXXXXXX , KC_F1      , KC_F2        , KC_F3        , KC_F4        , KC_F5   , KC_F6     , KC_F7         , KC_F8           , KC_F9          , KC__MUTE   , KC__VOLDOWN , KC__VOLUP , _______       , _______ ,
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX , XXXXXXX   , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX     , XXXXXXX   , XXXXXXX       , XXXXXXX ,
-    TG(1)   , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX , XXXXXXX   , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX     , RESET     ,
+    TG(1)   , XXXXXXX    , XXXXXXX      , TG(4)        , TG(3)        , XXXXXXX , XXXXXXX   , TG(3)         , TG(4)           , XXXXXXX        , XXXXXXX    , XXXXXXX     , RESET     ,
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX , XXXXXXX   , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX     , XXXXXXX   ,
     XXXXXXX , XXXXXXX    , XXXXXXX      , MEH(KC_SPC)  , XXXXXXX      , XXXXXXX , XXXXXXX   , XXXXXXX       , XXXXXXX         , XXXXXXX        
   ),
@@ -41,14 +41,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [5] = LAYOUT(
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX , XXXXXXX   , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX     , XXXXXXX   , _______       , _______ ,
     _______ , MEH(KC_Q)  , MEH(KC_W)    , MEH(KC_E)    , MEH(KC_R)    , XXXXXXX , XXXXXXX   , A(KC_DOWN)    , A(KC_UP)        , XXXXXXX        , XXXXXXX    , XXXXXXX     , XXXXXXX   , XXXXXXX       , _______ ,
-    TG(3)   , MEH(KC_A)  , MEH(KC_S)    , MEH(KC_D)    , MEH(KC_F)    , XXXXXXX , S(KC_TAB) , S(KC_DOWN)    , S(KC_UP)        , KC_TAB         , XXXXXXX    , XXXXXXX     , _______   ,
+    _______ , MEH(KC_A)  , MEH(KC_S)    , MEH(KC_D)    , MEH(KC_F)    , XXXXXXX , S(KC_TAB) , S(KC_DOWN)    , S(KC_UP)        , KC_TAB         , XXXXXXX    , XXXXXXX     , _______   ,
     _______ , MEH(KC_Z)  , MEH(KC_X)    , MEH(KC_C)    , MEH(KC_V)    , XXXXXXX , XXXXXXX   , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , _______     , _______   ,
     _______ , _______    , _______      , _______      , _______      , _______ , _______   , _______       , _______         , _______        
   ),
   [6] = LAYOUT(
     XXXXXXX , XXXXXXX    , XXXXXXX      , XXXXXXX      , XXXXXXX      , XXXXXXX , XXXXXXX   , XXXXXXX       , XXXXXXX         , XXXXXXX        , XXXXXXX    , XXXXXXX     , XXXXXXX   , _______       , _______ ,
     _______ , HYPR(KC_Q) , HYPR(KC_W)   , HYPR(KC_E)   , HYPR(KC_R)   , XXXXXXX , XXXXXXX   , S(G(KC_LBRC)) , S(G(KC_RBRC))   , XXXXXXX        , XXXXXXX    , XXXXXXX     , XXXXXXX   , XXXXXXX       , _______ ,
-    TG(4)   , HYPR(KC_A) , HYPR(KC_S)   , HYPR(KC_D)   , HYPR(KC_F)   , XXXXXXX , XXXXXXX   , SCMD(KC_B)    , G(KC_P)         , G(KC_F)        , A(G(KC_F)) , XXXXXXX     , _______   ,
+    _______ , HYPR(KC_A) , HYPR(KC_S)   , HYPR(KC_D)   , HYPR(KC_F)   , XXXXXXX , XXXXXXX   , SCMD(KC_B)    , G(KC_P)         , G(KC_F)        , A(G(KC_F)) , XXXXXXX     , _______   ,
     _______ , HYPR(KC_Z) , HYPR(KC_X)   , HYPR(KC_C)   , HYPR(KC_V)   , XXXXXXX , XXXXXXX   , S(G(KC_G))    , G(KC_G)         , S(G(KC_F))     , S(G(KC_H)) , _______     , _______   ,
     _______ , _______    , _______      , _______      , _______      , _______ , _______   , _______       , _______         , _______        
   ),
